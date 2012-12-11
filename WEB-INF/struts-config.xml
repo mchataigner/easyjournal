@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+
+  
+  
+  <form-beans>
+    <form-bean name="LogBean" type="controleur.profil.LogBean"/>
+    <form-bean name="BeanAbonne" type="controleur.profil.BeanAbonne"/>
+    <form-bean name="BeanEcrireArticle" type="controleur.gestionArticles.BeanEcrireArticle"/>
+    <form-bean name="BeanEditerArticle" type="controleur.gestionArticles.BeanEditerArticle"/>
+    <form-bean name="BeanEcrireCommentaire" type="controleur.gestionArticles.BeanEcrireCommentaire"/>
+    <form-bean name="BeanNoterArticle" type="controleur.gestionArticles.BeanNoterArticle"/>
+    <form-bean name="ModProfilForm" type="controleur.profil.ModProfilForm"/>
+    <form-bean name="BeanEditerCommentaire" type="controleur.gestionArticles.BeanEditerCommentaire"/>
+  </form-beans>
+  
+  <action-mappings>
+    <action path="/pages/NoterArticle" type="controleur.gestionArticles.NoterArticleAction" name="BeanNoterArticle" scope="session" validate="true" input="/pages/article.jsp">
+      <forward name="succes" path="/pages/article.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp"/>
+    </action>
+    <action path="/pages/Connexion" type="controleur.profil.LoginAction" name="LogBean" scope="session" validate="true" input="/pages/connexion.jsp">
+      <forward name="succes" path="/pages/accueil.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp?from=connexion"/>
+    </action>  
+    <action path="/pages/Enregistrement" type="controleur.profil.RegisterAction" name="BeanAbonne" scope="session" validate="true" input="/pages/enregistrement.jsp">
+      <forward name="succes" path="/pages/accueil.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp?from=register"/>
+    </action>
+    <action path="/pages/RedigerArticle" type="controleur.gestionArticles.EcrireArticleAction" name="BeanEcrireArticle" scope="session" validate="true" input="/pages/redigerUnArticle.jsp">
+      <forward name="succes" path="/pages/accueil.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp?from=article"/>
+    </action> 
+    <action path="/pages/EditerArticle" type="controleur.gestionArticles.EditerArticleAction" name="BeanEditerArticle" scope="session" validate="true" input="/pages/editerUnArticle.jsp">
+      <forward name="succes" path="/pages/article.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp"/>
+    </action>
+    <action path="/pages/EditerProfil" type="controleur.profil.ModProfilAction" name="ModProfilForm" scope="session" validate="true" input="/pages/profil.jsp">
+      <forward name="succes" path="/pages/accueil.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp?from=profil"/>
+    </action>
+    <action path="/pages/EcrireCommentaire" type="controleur.gestionArticles.EcrireCommentaireAction" name="BeanEcrireCommentaire" scope="session" validate="true" input="/pages/article.jsp">
+      <forward name="succes" path="/pages/article.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp?from=commentaire"/>
+    </action>
+    <action path="/pages/EditerCommentaire" type="controleur.gestionArticles.EditerCommentaireAction" name="BeanEditerCommentaire" scope="session" validate="true" input="/pages/article.jsp">
+      <forward name="succes" path="/pages/accueil.jsp"/>
+      <forward name="echec" path="/pages/erreur.jsp"/>
+    </action> 
+  </action-mappings>
+  
+  
+
+  <!-- ============================================= Controller Configuration -->
+
+  <controller
+     processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+
+  <!-- ======================================== Message Resources Definitions -->
+
+  <message-resources parameter="MessageResources" />
+
+
+  <!-- =============================================== Plug Ins Configuration -->
+
+  <!-- ======================================================= Tiles plugin -->
+  <!--
+     This plugin initialize Tiles definition factory. This later can takes some
+     parameters explained here after. The plugin first read parameters from
+     web.xml, thenoverload them with parameters defined here. All parameters
+     are optional.
+     The plugin should be declared in each struts-config file.
+     - definitions-config: (optional)
+     Specify configuration file names. There can be several comma
+     separated file names (default: ?? )
+     - moduleAware: (optional - struts1.1)
+     Specify if the Tiles definition factory is module aware. If true
+     (default), there will be one factory for each Struts module.
+     If false, there will be one common factory for all module. In this
+     later case, it is still needed to declare one plugin per module.
+     The factory will be initialized with parameters found in the first
+     initialized plugin (generally the one associated with the default
+     module).
+     true : One factory per module. (default)
+     false : one single shared factory for all modules
+     - definitions-parser-validate: (optional)
+     Specify if xml parser should validate the Tiles configuration file.
+     true : validate. DTD should be specified in file header (default)
+     false : no validation
+
+     Paths found in Tiles definitions are relative to the main context.
+    -->
+
+  <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+
+    <!-- Path to XML definition file -->
+    <set-property property="definitions-config"
+                  value="/WEB-INF/tiles-defs.xml" />
+    <!-- Set Module-awareness to true -->
+    <set-property property="moduleAware" value="true" />
+  </plug-in>
+
+
+  <!-- =================================================== Validator plugin -->
+
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property
+       property="pathnames"
+       value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+</struts-config>
+

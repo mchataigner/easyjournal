@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BDArticles PUBLIC "BDArticles.dtd" "http://localhost:8080/site/BDArticles.dtd">
+
+<!ELEMENT id (0-9)+>
+<!ELEMENT idCommentaire (0-9)+>
+<!ELEMENT note (0-9)+>
+<!ELEMENT contenu (#PCDATA)>
+
+
+<!ELEMENT article (id,idRedacteur,contenu,idCommentaire*,note*)>
+<!ATTLIST article idRedacteur (0-9)+ #REQUIRED>

@@ -1,0 +1,58 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{geometry}
+
+\title{Cas D'utilisation : admin}
+\author{}
+%opening
+\begin{document}
+
+\maketitle
+
+
+
+\textbf{Domaine:} journal en ligne\\
+\textbf{Titre:} créer un compte\\
+\textbf{Résumé:} Liste des actions réalisées par un admin souhaitant créer un compte.\\
+\textbf{Acteurs:} admin(A)\\
+\textbf{Motivation:} L'admin souhaite créer un compte.\\
+\textbf{Pré-conditions:} L'utilisateur admin s'est loggué en tan qu'admin.\\
+\textbf{post-condition(s):} Le compte est crée par le systeme.\\
+
+\textbf{Remarques ergonomiques}
+\textbf{Contraintes non fonctionnelles}
+\begin{center}
+  \begin{tabular}{|c|c|}
+\hline
+   \textbf{Type de contrainte}&\textbf{Descriptif}\\
+\hline
+Temps de réponse&De l'ordre de la seconde\\
+\hline
+Fréquence & Au maximum 1 secondes\\
+\hline
+Disponibilité & Cette fonction doit être opérationnelle à tout instant dans le système\\
+\hline
+Concurrence&\\
+\hline
+Intégrité&Non spécifique.\\
+\hline
+Confidentialité& Non spécifique.\\
+\hline
+
+  \end{tabular}
+\end{center}
+
+\textbf{Action de départ}
+
+\textbf{Scénario nominal}
+\begin{enumerate}
+\item A active la fonctionnalité du systeme qui crée un compte.
+\item A saisit les informations qui permettent de créer un compte et crée le compte.
+\item Le systeme confirme que le compte a bien été crée.
+\end{enumerate}
+
+\textbf{Action de fin:}
+
+10 A quitte la fonctionnalité du système qui supprime un commentaire.
+\end{document}

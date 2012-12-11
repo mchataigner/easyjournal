@@ -1,0 +1,4 @@
+cd ..
+export CLASSPATH=$(pwd)/lib/jdom.jar
+cd site
+find . -name "*.java" -exec javac -cp $CLASSPATH:./classes/ -sourcepath ./src -d ../WEB-INF/classes/ {} \;

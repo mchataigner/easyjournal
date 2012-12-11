@@ -1,0 +1,60 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{geometry}
+
+\title{Cas D'utilisation : admin}
+\author{}
+%opening
+\begin{document}
+
+\maketitle
+
+
+
+\textbf{Domaine:} journal en ligne\\
+\textbf{Titre:} créer un commentaire\\
+\textbf{Résumé:} Liste des actions réalisées par un abonné souhaitant créer un article.\\
+\textbf{Acteurs:} Abonné(A)\\
+\textbf{Motivation:} A souhaite créer un commentaire.\\
+\textbf{Pré-conditions:} L'utilisateur A s'est loggué en tant qu'abonné et est sur la page de consultation
+d'un article.\\
+\textbf{post-condition(s):} Le commentaire est crée par le systeme.\\
+
+\textbf{Remarques ergonomiques}
+\textbf{Contraintes non fonctionnelles}
+\begin{center}
+  \begin{tabular}{|c|c|}
+\hline
+   \textbf{Type de contrainte}&\textbf{Descriptif}\\
+\hline
+Temps de réponse&De l'ordre de la seconde\\
+\hline
+Fréquence & Au maximum 1 secondes\\
+\hline
+Disponibilité & Cette fonction doit être opérationnelle à tout instant dans le système\\
+\hline
+Concurrence&\\
+\hline
+Intégrité&Non spécifique.\\
+\hline
+Confidentialité& Non spécifique.\\
+\hline
+
+  \end{tabular}
+\end{center}
+
+\textbf{Action de départ}
+
+\textbf{Scénario nominal}
+\begin{enumerate}
+\item A active la fonctionnalité su systeme qui crée un commentaire.
+\item Le systeme affiche la page permettant de créer un article. 
+\item R saisit le texte pour créer son commentaire.
+\item Le systeme confirme que le commentaire a bien été crée et redirige sur la page de consultation de l'article.
+\end{enumerate}
+
+\textbf{Action de fin:}
+
+10 R quitte la fonctionnalité du système qui crée un commentaire.
+\end{document}

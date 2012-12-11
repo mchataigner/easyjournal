@@ -1,0 +1,185 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 100% georgia, sans-serif;
+	line-height: 1.88889;
+	/*color: #555753;*/
+	color: #FF6600;
+	background: center;
+	background-size: 100%;
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+	
+	
+.contenu:{ 
+   font-weight: bold; /* En gras */
+   font-size: 1.2em; /* Ecrit légèrement plus gros que la normale */
+   color: blue; /* En bleu */
+}	
+	
+	
+	
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #FFFFFF;
+	}
+a:hover, a:active { 
+	text-decoration: underline; 
+	color: #FF6600
+	}	
+	
+	
+	
+	
+a.entete:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #646464;
+	}
+a.entete:hover, a.entete:active { 
+	text-decoration: underline; 
+	color: #FF6600
+	}
+acronym {
+	border-bottom: none;
+	}
+
+hr{
+border: 10px black outset;
+}
+			/*
+			none   : pas de bordure (par défaut)
+			hidden : bordure cachée
+			solid  : ligne pleine
+			double : ligne double (nécessite une taille de bordure de 3px minimum)
+			dashed : en tirets
+			dotted : en pointillés
+			inset  : effet 3D "enfoncé"
+			outset : effet 3D "surélevé"
+			ridge  : effet 3D "demi-rond"
+			*/
+a.article:link{
+	/*background: aqua;*/
+	/* background: url("images/lecteur.jpg"); */
+	color: #FF6600;
+}
+	
+	a.article:hover, a.article:active{
+	/*background: aqua;*/
+	/* background: url("images/lecteur.jpg"); */
+	color: #646464;
+}
+		
+	
+	
+	
+table.article {
+border:3px solid #996600;
+border-collapse:collapse;
+width:30%;
+margin:auto;
+}
+
+
+table.profil {
+border:3px solid #FF6600;
+border-collapse:collapse;
+margin:auto;
+}
+
+thead, tfoot {
+background-color:#FF6600;
+border:1px solid #6495ed;
+}
+tbody {
+background-color:#FFFFFF;
+border:1px solid #6495ed;
+}
+th {
+font-family:monospace;
+border:1px dotted #6495ed;
+padding:5px;
+background-color:#EFF6FF;
+width:25%;
+}
+td {
+font-family:sans-serif;
+font-size:80%;
+border:1px solid #996600;
+padding:5px;
+text-align:center;
+color: #242424;
+}
+caption {
+font-family:sans-serif;
+}
+	
+
+	
+table.commentaire {
+border:3px solid #FF6600;
+border-collapse:collapse;
+width:30%;
+margin:auto;
+}
+
+	
+.test{
+/*background: url("images/toile.jpeg") ;*/
+background: url("images/ubuntu.jpg") ;
+background-repeat:repeat-x;
+background-position:top;
+background-attachment: fixed;
+
+}
+	
+	
+
+	
+.temp{
+	background:  black;
+	color: white;
+	text-decoration: blink;
+}
+	
+		
+.titreAccueilAbonne{
+	color: #646464;
+	text-decoration: none;
+}
+	
+a.lienAccueilAbonne:link { 
+	font: 150% georgia, sans-serif;
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #FFFFFF;
+	}
+a.lienAccueilAbonne:hover, a.lienAccueilAbonne:active { 
+	font: 150% georgia, sans-serif;
+	text-decoration: underline; 
+	font-weight: bold; 
+	color: #FF6600;
+	}
+	
+	
+	
+	

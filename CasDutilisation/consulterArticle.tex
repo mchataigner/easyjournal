@@ -1,0 +1,61 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{geometry}
+
+\title{Cas D'utilisation : admin}
+\author{}
+%opening
+\begin{document}
+
+\maketitle
+
+
+
+\textbf{Domaine:} journal en ligne\\
+\textbf{Titre:} Consulter un article\\
+\textbf{Résumé:} Liste des actions réalisées par un Utilisateur souhaitant consulter un article.\\
+\textbf{Acteurs:} Utilisateur(U)\\
+\textbf{Motivation:} U souhaite consulter un article.\\
+\textbf{Pré-conditions:} L'article existe.\\
+\textbf{post-condition(s):}\\
+
+\textbf{Remarques ergonomiques}
+\textbf{Contraintes non fonctionnelles}
+\begin{center}
+  \begin{tabular}{|c|c|}
+\hline
+   \textbf{Type de contrainte}&\textbf{Descriptif}\\
+\hline
+Temps de réponse&De l'ordre de la seconde\\
+\hline
+Fréquence & Au maximum 1 secondes\\
+\hline
+Disponibilité & Cette fonction doit être opérationnelle à tout instant dans le système\\
+\hline
+Concurrence&plusieurs Acteurs peuvent activer cette fonctionnalité en même temps\\
+\hline
+Intégrité&Non spécifique.\\
+\hline
+Confidentialité& Non spécifique.\\
+\hline
+
+  \end{tabular}
+\end{center}
+
+\textbf{Action de départ}
+
+\textbf{Scénario nominal}
+\begin{enumerate}
+\item U active la fonctionnalité du systeme qui permet de rechercher un article.
+\item Le systeme vérifie que U est admin ou redacteur ou abonne et propose à U une barre de recherche.
+\item U saisit les informations qui permettent d'identifier un article.
+\item Le systeme propose une liste d'article.
+\item U choisit un des article
+\item Le systeme affiche le contenu de l'article ainsi que les commentaires associées.
+\end{enumerate}
+
+\textbf{Action de fin:}
+
+10 A quitte la fonctionnalité du système qui consulte un article.
+\end{document}

@@ -1,0 +1,14 @@
+#!/bin/bash
+#export CLASSPATH=$../jboss-5.0.0.CR2/server/default/deploy/struts.war/WEB-INF/lib/*.jar
+
+export CLASSPATH=$CLASSPATH:/home/paul/Documents/asi4.1/techweb/asi09-tw-g2/trunk/jboss-5.0.0.CR2/server/default/deploy/struts.war/WEB-INF/lib/struts.jar
+export CLASSPATH=$CLASSPATH:/home/paul/Documents/asi4.1/techweb/asi09-tw-g2/trunk/jboss-5.0.0.CR2/server/default/deploy/struts.war/WEB-INF/lib/antlr.jar
+export CLASSPATH=$CLASSPATH:/home/paul/Documents/asi4.1/techweb/asi09-tw-g2/trunk/jboss-5.0.0.CR2/server/default/deploy/struts.war/WEB-INF/lib/commons-beanutils.jar
+export CLASSPATH=$CLASSPATH:/home/paul/Documents/asi4.1/techweb/asi09-tw-g2/trunk/jboss-5.0.0.CR2/server/default/deploy/struts.war/WEB-INF/lib/jdom.jar
+export CLASSPATH=$CLASSPATH:/home/paul/Documents/asi4.1/techweb/asi09-tw-g2/trunk/jboss-5.0.0.CR2/server/default/servlet-api.jar
+export CLASSPATH=$CLASSPATH:/home/paul/Documents/asi4.1/techweb/asi09-tw-g2/trunk/jboss-5.0.0.CR2/server/default/lib/servlet-api.jar
+cd site
+#javac -cp $CLASSPATH:./classes -d classes/ -sourcepath src/  $1
+find . -name "*.java" -exec javac -cp $CLASSPATH:./classes/ -sourcepath ./src -d ../WEB-INF/classes/ {} \;
+
+#jar cf site.war WEB-INF pages

@@ -1,0 +1,64 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{geometry}
+
+\title{Cas D'utilisation : admin}
+\author{}
+%opening
+\begin{document}
+
+\maketitle
+
+
+
+\textbf{Domaine:} journal en ligne\\
+\textbf{Titre:} modifier un compte\\
+\textbf{Résumé:} Liste des actions réalisées par un admin souhaitant modifier un compte.\\
+\textbf{Acteurs:} admin(A)\\
+\textbf{Motivation:} L'admin souhaite modifier un compte.\\
+\textbf{Pré-conditions:} Le compte existe, L'utilisateur admin s'est loggué en tan qu'admin.\\
+\textbf{post-condition(s):} Le compte est modifié et validé par le systeme.\\
+
+%\textbf{Exception:}\\ Exception A : L'Organisateur ne valide pas la liste
+
+%Le systeme revient à l'état suivant l'action de départ.
+
+\textbf{Remarques ergonomiques}
+\textbf{Contraintes non fonctionnelles}
+\begin{center}
+  \begin{tabular}{|c|c|}
+\hline
+   \textbf{Type de contrainte}&\textbf{Descriptif}\\
+\hline
+Temps de réponse&De l'ordre de la seconde\\
+\hline
+Fréquence & Au maximum 10 secondes\\
+\hline
+Disponibilité & Cette fonction doit être opérationnelle à tout instant dans le système\\
+\hline
+Concurrence&Non applicable, il n'y a qu'un admin et un seul.\\
+\hline
+Intégrité&Non spécifique.\\
+\hline
+Confidentialité& Non spécifique.\\
+\hline
+
+  \end{tabular}
+\end{center}
+
+\textbf{Action de départ}
+
+\textbf{Scénario nominal}
+\begin{enumerate}
+\item A active la fonctionnalité du systeme qui modifie un compte.
+\item A saisit les informations qui permettent d'identifier un compte.
+\item Le systeme affiche la page qui permet de modifier ce compte.
+\item A modifie le compte.
+\item Le systeme confirme que le compte a bien été modifié.
+\end{enumerate}
+
+\textbf{Action de fin:}
+
+10 A quitte la fonctionnalité du système qui modifie un compte.
+\end{document}

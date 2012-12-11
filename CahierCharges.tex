@@ -1,0 +1,90 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+
+\title{Cahier des charges - Groupe 2}
+\author{Pierre BIENAIMÉ, Bastien BONNET, Mathieu CHATAIGNER,\\ Mathieu FRESQUET, Paul GAY}
+%\geometry{hmargin=.2\textwidth, vmargin=.15\textheight}
+
+\begin{document}
+\maketitle
+
+
+
+\section{Description du site}
+Il s'agit d'un site de journal gratuit en ligne. L'accès aux articles sera possible en fonction du niveau d'autorisation de l'utilisateur courant. 
+
+\section{Liste des fonctionnalités du produit final}
+
+\subsection{Fonctions disponibles}
+    \begin{description}
+	\item[Rédaction d'articles en ligne :] Possibilité, pour les utilisateurs disposant d'un com\-pte avec niveau d'autorisation approprié ( \texttt{Rédacteur} ), de rédiger et de publier un article en ligne ;
+	\item[Consultation d'articles :] Possibilité, pour les utilisateurs disposant d'un compte avec niveau d'autorisation approprié ( \texttt{Abonné} ), de consulter des articles en ligne ;
+	\item[Commentaires d'articles :] Possibilité, pour les utilisateurs disposant d'un compte avec niveau d'autorisation approprié ( \texttt{Abonné} ), de poster un commentaire sur un article. Ce commentaire sera visible par tous les gens disposant des droits de lecture de l'article concerné.
+    \end{description}
+
+\subsection{Création / gestion de comptes}
+    \begin{description}
+	\item[Niveaux de confidentialité :] Quatre niveaux de confidentialité seront définis :
+	           \begin{itemize}
+		    \item \texttt{Invité} : il peut consulter le dernier article publié et voir les résultats d'une recherche (la liste des titres d'articles envoyés en réponse à la recherche), sans pour autant pouvoir consulter les articles complets ;
+		    \item \texttt{Abonné} : il dispose des droits de lecture pour tous les articles, de recherche d'articles ainsi que du droit de poster un commentaire d'article. Il peut de plus modifier ses propres commentaires ;
+		    \item \texttt{Rédacteur} : il dispose des droits de l'              \texttt{Abonné} ainsi que du droit de rédaction d'article. Il peut également modifier ses propres articles ;
+		    \item \texttt{Administrateur} : Il dispose des droits du 	             \texttt{Rédacteur} ainsi que du droit de modification de tous les articles et commentaires d'articles présents sur le site. Il peut également supprimer des comptes d'utilisateurs de type \texttt{Abonné}.
+		    \end{itemize}
+
+	\item[Création / Edition de compte :] Possibilité pour les personnes ayant un profil        \texttt{In\-vité} de créer un compte pour obtenir un statut d'        \texttt{Abonné}.
+    \end{description}
+
+\subsection{Recherche d'articles}
+    Possibilité d'effectuer une recherche d'articles avec les critères suivants :
+    \begin{itemize}
+	\item Par mots clefs ;
+	\item Par auteur ;
+	\item Par Date.
+    \end{itemize}
+
+\subsection{Valorisation des comptes}
+    \begin{description}
+	\item[Système de vote :] Chaque abonné aura la possibilité de voter une fois pour chaque article pour donner son avis :
+	\begin{itemize}
+	 \item Bon
+	\item Moyen
+	\item Mauvais
+	\end{itemize}
+
+    Pour un même auteur, une moyenne des avis sera effectuée afin d'attribuer une note à chaque auteur.
+
+	\item [Points en fonction du nombre d'articles consultés :] Chaque abonné gagnera un point par nouvel article consulté (donc un article déjà consulté aupravant ne comptera pas), ce qui reflètera le degré d'intérêt qu'il porte au site.
+    \end{description}
+
+
+% \definecolor{light-gray}{gray}{0.95}
+% \lstset{language=octave,
+% frame=shadowbox,
+% backgroundcolor=\color{light-gray},
+% basicstyle=\footnotesize,
+% stringstyle=\ttfamily,
+% xleftmargin=1cm,
+% xrightmargin=1cm,
+% breaklines,
+% showstringspaces=false,
+% showtabs=false,
+% extendedchars=false,
+% numbers=left,
+% numberstyle=\tiny,
+% stepnumber=5,
+% numbersep=5pt}
+
+% \begin{lstlisting}
+% coucou
+% \end{lstlisting}
+
+
+\end{document}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BDCommentaires PUBLIC "BDCommentaires.dtd" "http://localhost:8080/site/BDCommentaires.dtd">
+
+<!ELEMENT id (0-9)+>
+<!ELEMENT idUtilisateur (0-9)+>
+<!ELEMENT idArticle (0-9)+>
+<!ELEMENT contenu (#PCDATA)>
+
+
+<!ELEMENT commentaire (id,idArticle,idUtilisateur,contenu)>
+

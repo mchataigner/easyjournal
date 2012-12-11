@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BDUtilisateurs PUBLIC "BDUtilisateurs.dtd" "http://localhost:8080/site/BDUtilisateurs.dtd">
+
+<!ELEMENT id (0-9)+>
+<!ELEMENT nbArtVisites (0-9)+>
+
+<!ELEMENT login (#PCDATA)>
+<!ELEMENT motdepasse (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT article>
+<!ELEMENT articlesNotes article*>
+<!ELEMENT articlesEcris article*>
+
+
+
+<!ELEMENT abonne (id,login,motdepasse,nom,prenom,email,nbArtVisites,articlesNotes)>
+<!ELEMENT redacteur (id,login,motdepasse,nom,prenom,email,nbArtVisites,articlesNotes,articlesEcris)>
+<!ELEMENT administrateur (id,login,motdepasse)>
+
+
